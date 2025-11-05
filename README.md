@@ -27,7 +27,7 @@ The histogram is fully dynamic, featuring a custom, visually clear x-axis:
 Bin Label Generation: =CONCAT("$",LEFT(I5,6),"-$",LEFT(I6,6)) (Used to dynamically build descriptive labels like "$350.00-$360.00" for the chart's x-axis).
 Frequency Calculation: =FREQUENCY(SimRange, I5:I23) is used to calculate the counts across the dynamic SimRange. 
 
-Demonstration & Results:
+Demonstration & Results (Example):
 Using DRI as a proof-of-concept (7.00% Expected Growth Rate), the model demonstrates its utility:
 Forecast: Mean Price of $355.57 (7.04% Compounded Annual Growth Rate).
 Risk Quantification: For a $350.00$ target, the model calculates a 37.6% probability of falling below target.
@@ -39,3 +39,4 @@ How to Run the Model:
 3. Navigate to the Inputs sheet to set the core manual metrics (e.g., Investment Horizon, Drift, Number of Simulations).
 4. Run Goal Seek (on the Inputs sheet) to find the appropriate Decimal Degrees of Freedom that achieves the desired P(3sigma) next to where the Degree of Freedom is calculated.
 5. View the final forecast and risk metrics on the Output sheet.
+6. Press "Caculate Now" in the Formulas Tab to rerun model
