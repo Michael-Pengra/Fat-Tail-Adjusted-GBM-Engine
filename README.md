@@ -1,5 +1,7 @@
 Geometric Brownian Motion (GBM) Monte Carlo Simulation Model
-1. Model Purpose and Core Innovation
+
+1. Model Purpose and Core Innovation:
+
 This project is a detailed financial model, built entirely in Microsoft Excel, that uses a Monte Carlo Simulation based on Geometric Brownian Motion (GBM) to forecast the future distribution of an asset's value.
 
 The core of this model is its ability to create a realistic risk profile. Standard models assume markets follow a perfect bell curve (Normal Distribution), which is often wrong. My model solves this by letting the user define the risk, specifically:
@@ -11,6 +13,7 @@ User-Defined Risk: The user inputs the Desired Probability for a large price mov
 Handling Excel Limitations: A specific linear interpolation formula was developed to allow the model to work with non-integer parameters in Excel's statistical functions, a necessary step for accurate calibration.
 
 2. Data Processing and Formulas
+
 Data Sourcing: Historical price data is pulled and manually pasted into the RawData sheet. The model then calculates daily Log Returns for volatility analysis.
 
 Volatility: Daily Uncertainty is calculated as the standard deviation of the most recent three years of Log Returns.
@@ -22,6 +25,7 @@ Drift Formula (Copy-Pasteable): Drift = ( (LN(1+Simple Return) * Investment Hori
 Simulation Formula (Core Logic): The final price in each simulation is calculated using the GBM equation which incorporates the annualized terms and the custom t-distribution factor.
 
 3. Model Architecture and Technical Features
+
 Five-Sheet Structure: RawData, Inputs, Simulation 1 (Daily Steps), Simulation 2 (Final Outcomes), and Output.
 
 Dynamic Automation: Over 20 Named Ranges are used for formula clarity and model reliability. The simulation output range is dynamically controlled using the OFFSET function to automatically resize based on the user-defined number of simulations.
@@ -29,6 +33,7 @@ Dynamic Automation: Over 20 Named Ranges are used for formula clarity and model 
 Visualization Automation: The output sheet features a Dynamic Histogram that automatically calculates and adjusts its bins and labels when the number of simulations is changed. Custom formulas are used to ensure the axis labels are clear and accurate.
 
 4. Output and Risk Reporting
+   
 The final output is a full report on the thousands of simulated price outcomes, providing both performance metrics and risk measures.
 
 Risk Metrics (Value at Risk - VaR): The model calculates the 1% and 5% metric values. This is labelled Value at Risk (Loss) if the value is below the initial price, or Downside Profit Floor if it is still a gain.
