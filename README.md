@@ -22,7 +22,7 @@ I developed this model as an undergraduate junior double majoring in Applied and
 
 ### 1. Extreme Risk Modeling (Custom Distribution)
 
-* Custom Risk Input: The model allows the user to define the likelihood of an extreme, rare event ($\text{P}(3\sigma)$).
+* Custom Risk Input: The model allows the user to define the likelihood of an extreme, rare event (Probability of a 3sigma event).
 * High Precision Math: This input switches the core math to a specialized formula (Student's t-distribution), which provides more realistic forecasts by fully accounting for potential large price swings.
 * Problem Solved (Accuracy): Since Excel's built-in functions can't perfectly calculate this specialized formula for all numbers, I designed a linear interpolation formula. This custom solution ensures the model maintains high statistical accuracy.
 
@@ -44,4 +44,4 @@ The model provides comprehensive reporting across three formats: Metric Value, T
 * Risk Metrics: Provides Mean, Median, Min, Max, Standard Deviation, Percentiles, and Excess Kurtosis (a direct measure of risk concentration).
 * Downside Analysis: Calculates the maximum probable loss (VaR) at 1% and 5% confidence levels, dynamically labeled as "Value at Risk (Loss)" or "Downside Profit Floor."
 * Professional Charts: Features a dynamic histogram with automated data grouping and professionally formatted axis labels (created using nested text functions) for superior visualization.
-* Data Sourcing: Historical Log Returns are calculated from time-series data using the formula: =IFERROR(LN(C7/C6)/(B7-B6),"")
+* Data Sourcing: Historical Log Returns are calculated from time-series data.
