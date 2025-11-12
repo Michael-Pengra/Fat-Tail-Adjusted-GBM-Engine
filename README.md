@@ -44,4 +44,4 @@ The model provides comprehensive reporting across three formats: Metric Value, T
 * Risk Metrics: Provides Mean, Median, Min, Max, Standard Deviation, Percentiles, and Excess Kurtosis (a direct measure of risk concentration).
 * Downside Analysis: Calculates the maximum probable loss (VaR) at 1% and 5% confidence levels, dynamically labeled as "Value at Risk (Loss)" or "Downside Profit Floor."
 * Professional Charts: Features a dynamic histogram with automated data grouping and professionally formatted axis labels (created using nested text functions) for superior visualization.
-* Data Sourcing: Historical Log Returns are calculated from time-series data.
+* Data Sourcing: Historical Log Returns are calculated from historical data entered by the user.
