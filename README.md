@@ -1,13 +1,13 @@
 # GBM Risk Simulator  
 **100,000 Monte Carlo Paths • Fat Tails • 100% Excel**  
 *Forecast any metric with realistic crash/upside risk*
-# 📊 Advanced Analytical Model: Geometric Brownian Motion (GBM) Simulation Tool
+# Advanced Analytical Model: Geometric Brownian Motion (GBM) Simulation Tool
 
 This project is a powerful, general-purpose quantitative risk model developed entirely in Microsoft Excel. It performs a Monte Carlo Simulation to forecast the future risk range of any continuous metric (e.g., commodity prices, stock prices, currency rates).
 
 ---
 
-## 💡 Project Context and Purpose
+## Project Context and Purpose
 
 I developed this model as an undergraduate junior double majoring in Applied and Computational Mathematics and Finance. The core goal was to build a stochastic model that is widely applicable and addresses the key shortcomings of older financial models.
 
@@ -17,7 +17,7 @@ I developed this model as an undergraduate junior double majoring in Applied and
 
 ---
 
-## 🌟 Superlative Technical Features
+## Superlative Technical Features
 
 ### 1. **Extreme Risk Modeling (Custom Distribution)**
 
@@ -36,7 +36,7 @@ I developed this model as an undergraduate junior double majoring in Applied and
 
 ---
 
-## 📈 Outputs and Reporting
+## Outputs and Reporting
 
 The model provides comprehensive reporting across three formats: Metric Value, Total Percent Growth, and Average % Growth Per Year (CAGR).
 
