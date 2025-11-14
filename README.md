@@ -14,7 +14,7 @@ I developed this model as an undergraduate junior double majoring in Applied and
 
 * Model Type: Geometric Brownian Motion (GBM) Monte Carlo Simulation.
 * Wide Applicability: Chosen over simpler models (like Black-Scholes) because GBM has a broader range of uses for forecasting metrics beyond options pricing.
-* Academic Rigor: Addresses the main critique of traditional modeling—the flawed assumption of a Normal distribution—by integrating custom statistical methods.
+* Academic Rigor: Addresses the main critique of traditional modeling, the flawed assumption of a Normal distribution, by integrating custom statistical methods.
 
 ---
 
