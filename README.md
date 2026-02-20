@@ -1,47 +1,36 @@
-# Advanced Analytical Model: GBM Simulation Tool
+Stochastic Jump Diffusion Model
+This is a high performance quantitative risk model I built in Excel that uses a Stochastic Jump Diffusion Monte Carlo Simulation to forecast asset price paths. Unlike basic models, it uses fat tail distributions and discrete market shocks to capture the messy reality of financial markets.
 
-## 100,000 Monte Carlo Paths • Fat Tails • 100% Excel
+Core Features
+1. Fat Tail Risk
+It solves the normal distribution flaw by using a Student’s t-distribution with linear interpolation for high statistical accuracy.
 
-### Advanced Analytical Model: Geometric Brownian Motion (GBM) Simulation Tool
+It uses a lookup engine to instantly set degrees of freedom based on user defined risk parameters, which replaces the old manual goal seek process.
 
-This project is a powerful, general-purpose quantitative risk model developed entirely in Microsoft Excel. It performs a Monte Carlo Simulation to forecast the future risk range of any continuous metric (e.g., commodity prices, stock prices, currency rates).
+2. Modeling Crashes
+The model randomizes the frequency of jumps or shocks over the investment horizon to reflect how risk actually clusters in the real world.
 
----
+It uses three different random variables per path to keep market sentiment, crash count, and crash severity uncorrelated.
 
-## Project Context and Purpose
+3. Scale and Performance
+It runs 100,000 simulation paths in under two seconds.
 
-I developed this model as an undergraduate junior double majoring in Applied and Computational Mathematics and Finance.
+The model has a suggestion engine that scans 10 years of data to suggest CAGR, volatility, and 8-sigma event frequencies.
 
-* Model Type: Geometric Brownian Motion (GBM) Monte Carlo Simulation.
-* Wide Applicability: Chosen over simpler models (like Black-Scholes) because GBM has a broader range of uses for forecasting metrics beyond options pricing.
-* Academic Rigor: Addresses the main critique of traditional modeling, the flawed assumption of a Normal distribution, by integrating custom statistical methods.
+Everything is dynamic using named ranges and offset functions so the charts and histograms update in real time.
 
----
+Risk Analytics and Dashboards
+It outputs the mean, median, min, max, and standard deviation for the metric value, total return, and CAGR.
 
-## Superlative Technical Features
+It calculates Value at Risk at 1% and 5% levels and provides automated confidence intervals up to 99.999%.
 
-### 1. Extreme Risk Modeling (Custom Distribution)
+There is a dynamic histogram with automated data grouping and professionally formatted axis labels.
 
-* Custom Risk Input: The model allows the user to define the likelihood of an extreme, rare event (Probability of a 3sigma event).
-* High Precision Math: This input switches the core math to a specialized formula (Student's t-distribution), which provides more realistic forecasts by fully accounting for potential large price swings.
-* Problem Solved (Accuracy): Since Excel's built-in functions can't perfectly calculate this specialized formula for all numbers, I designed a linear interpolation formula. This custom solution ensures the model maintains high statistical accuracy.
+Strategic Use Cases
+This is a tool for scenario and risk analysis across different areas of finance:
 
-### 2. Automation and Scale
+Asset Management: Looking at portfolio value evolution and FX rate risk.
 
-| Achievement | Technical Implementation | Impact |
-| :--- | :--- | :--- |
-| Capacity | Runs up to 100,000 simulations in Excel. | Provides a large, statistically reliable sample for precise risk analysis. |
-| Automated Setup | Replaced the old, manual Goal Seek process with an automatic VLOOKUP solution to set the required math parameters. | Ensures the model is fast, error-free, and simple to set up instantly. |
-| Dynamic Data | Used the OFFSET function to create self-adjusting data ranges that resize automatically when the simulation count changes. | Guarantees all charts and final outputs are always complete. |
-| Structure | Built with over 20 Named Ranges and uses a formula to correctly convert the user's Annualized Growth Rate into the specific Drift term required for the GBM math. | Ensures mathematical accuracy across different time horizons. |
+Investment Banking and PE: Modeling LBO equity IRR risk and exit multiple uncertainty.
 
----
-
-## Outputs and Reporting
-
-The model provides comprehensive reporting across three formats: Metric Value, Total Percent Growth, and Average % Growth Per Year (CAGR).
-
-* Risk Metrics: Provides Mean, Median, Min, Max, Standard Deviation, and Percentiles.
-* Downside Analysis: Calculates the maximum probable loss (VaR) at 1% and 5% confidence levels, dynamically labeled as "Value at Risk (Loss)" or "Downside Profit Floor."
-* Professional Charts: Features a dynamic histogram with automated data grouping and professionally formatted axis labels (created using nested text functions) for superior visualization.
-* Data Sourcing: Historical Log Returns are calculated from historical data entered by the user.
+Corporate Strategy: Forecasting revenue and EBITDA growth paths subject to discrete shocks.
