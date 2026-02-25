@@ -149,13 +149,3 @@ Two versions are maintained:
 Single-Asset Version (leaner structure)
 
 Multi-Asset Correlated Version (full Cholesky framework)
-
-File Access
-
-The multi-asset workbook exceeds GitHub’s file size limits (51MB).
-
-Download link:
-
-[Insert External Download Link Here]
-
-(Google Drive / OneDrive / Dropbox recommended.)
